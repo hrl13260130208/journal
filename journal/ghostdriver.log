@@ -1,0 +1,36 @@
+[INFO  - 2019-10-28T06:33:28.456Z] GhostDriver - Main - running on port 57716
+[INFO  - 2019-10-28T06:33:30.980Z] Session [dbaa1ba0-f94c-11e9-a2fb-b352c1f2e041] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":true}
+[INFO  - 2019-10-28T06:33:30.981Z] Session [dbaa1ba0-f94c-11e9-a2fb-b352c1f2e041] - page.customHeaders:  - {}
+[INFO  - 2019-10-28T06:33:30.981Z] Session [dbaa1ba0-f94c-11e9-a2fb-b352c1f2e041] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"windows-7-32bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2019-10-28T06:33:30.981Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: dbaa1ba0-f94c-11e9-a2fb-b352c1f2e041
+[ERROR - 2019-10-28T06:34:19.733Z] Session [dbaa1ba0-f94c-11e9-a2fb-b352c1f2e041] - page.onError - msg: Unhandled promise rejection [object Object]
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2019-10-28T06:34:19.733Z] Session [dbaa1ba0-f94c-11e9-a2fb-b352c1f2e041] - page.onError - stack:
+  (anonymous function) (https://s1.hdslb.com/bfs/static/jinkela/home/1.home.a57f2bc34c08f59a67a3f153708c6ea258a35eff.js:24)
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2019-10-28T06:34:19.733Z] Session [dbaa1ba0-f94c-11e9-a2fb-b352c1f2e041] - page.onError - msg: Unhandled promise rejection [object Object]
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2019-10-28T06:34:19.733Z] Session [dbaa1ba0-f94c-11e9-a2fb-b352c1f2e041] - page.onError - stack:
+  (anonymous function) (https://s1.hdslb.com/bfs/static/jinkela/home/1.home.a57f2bc34c08f59a67a3f153708c6ea258a35eff.js:36)
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2019-10-28T06:34:19.734Z] Session [dbaa1ba0-f94c-11e9-a2fb-b352c1f2e041] - page.onError - msg: Unhandled promise rejection [object Object]
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2019-10-28T06:34:19.734Z] Session [dbaa1ba0-f94c-11e9-a2fb-b352c1f2e041] - page.onError - stack:
+  (anonymous function) (https://s1.hdslb.com/bfs/static/jinkela/home/1.home.a57f2bc34c08f59a67a3f153708c6ea258a35eff.js:36)
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2019-10-28T06:34:40.127Z] Session [dbaa1ba0-f94c-11e9-a2fb-b352c1f2e041] - page.onError - msg: Unhandled promise rejection [object Object]
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2019-10-28T06:34:40.127Z] Session [dbaa1ba0-f94c-11e9-a2fb-b352c1f2e041] - page.onError - stack:
+  (anonymous function) (https://s1.hdslb.com/bfs/static/jinkela/home/1.home.a57f2bc34c08f59a67a3f153708c6ea258a35eff.js:24)
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2019-10-28T06:35:14.591Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1572244514535
+
+  phantomjs://platform/console++.js:263 in error
