@@ -3,7 +3,8 @@ import redis
 import json
 
 
-REDIS_IP="10.3.1.99"
+# REDIS_IP="10.3.1.99"
+REDIS_IP="localhost"
 REDIS_PORT="6379"
 # REDIS_DB="2" #MaryAnn
 # REDIS_DB="10" #aspbs

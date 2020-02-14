@@ -16,7 +16,7 @@ from  xlutils import copy
 
 logger = logging.getLogger("logger")
 
-EXECEL_PATH="C:/execl/"
+EXECEL_PATH=r"D:\execl\\"
 
 sb={}
 def create_colume_name_variable(path):
