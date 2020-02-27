@@ -196,18 +196,35 @@ class common_article:
                                                journal_temp[Row_Name.ISSUE])
 
     def get_article(self,info):
-        data = requests.get(info[Row_Name.TEMP_AURL],headers=header,verify=False)
-        bs_c = BeautifulSoup(data.text, "html.parser")
+        if Row_Name.TEMP_AURL in info.keys():
 
-        #解析article_type
-        if  not Row_Name.ARTICLE_TYPE in info.keys():
+
+            data = requests.get(info[Row_Name.TEMP_AURL],headers=header,verify=False)
+            bs_c = BeautifulSoup(data.text, "html.parser")
+            info=self.head_parser(info,bs_c)
+            try:
+                info=self.second(info,data.text,soup=bs_c)
+            except:
+                logger.error("second方法执行出错！", exc_info=True)
+        else:
+            try:
+                info = self.second(info, None, soup=None)
+            except:
+                logger.error("second方法执行出错！", exc_info=True)
+
+
+
+        return self.split_items(info)
+
+    def head_parser(self,info,bs_c):
+
+        # 解析article_type
+        if not Row_Name.ARTICLE_TYPE in info.keys():
             article_type = bs_c.find("meta", {"name": "dc.Type"})
-            if article_type!=None:
-                info[Row_Name.ARTICLE_TYPE]= article_type["content"]
+            if article_type != None:
+                info[Row_Name.ARTICLE_TYPE] = article_type["content"]
 
-
-
-        #解析doi
+        # 解析doi
         if not Row_Name.DOI in info.keys():
             article_doi = bs_c.find("meta", {"scheme": "doi"})
             if article_doi != None:
@@ -217,7 +234,7 @@ class common_article:
             if article_doi != None:
                 info[Row_Name.DOI] = article_doi["content"]
 
-        #解析title
+        # 解析title
         if not Row_Name.TITLE in info.keys():
             article_title = bs_c.find("meta", {"name": "dc.Title"})
             if article_title != None:
@@ -237,7 +254,7 @@ class common_article:
             if description != None:
                 info[Row_Name.ABSTRACT] = description["content"]
 
-            description = bs_c.find("meta", { "property":"og:description"})
+            description = bs_c.find("meta", {"property": "og:description"})
             if description != None:
                 info[Row_Name.ABSTRACT] = description["content"]
 
@@ -245,11 +262,11 @@ class common_article:
         if not Row_Name.KEYWORD in info.keys():
             article_keyword = bs_c.find("meta", {"name": "keywords"})
             if article_keyword != None:
-                info[Row_Name.KEYWORD] = article_keyword["content"].replace(",", "##").replace(";","##")
+                info[Row_Name.KEYWORD] = article_keyword["content"].replace(",", "##").replace(";", "##")
 
             article_keyword = bs_c.find("meta", {"name": "citation_keywords"})
             if article_keyword != None:
-                info[Row_Name.KEYWORD] = article_keyword["content"].replace(",", "##").replace(";","##")
+                info[Row_Name.KEYWORD] = article_keyword["content"].replace(",", "##").replace(";", "##")
 
         # 解析pub_date
         if not Row_Name.STRING_PUB_DATE in info.keys():
@@ -277,25 +294,25 @@ class common_article:
         if not Row_Name.COPYRIGHT_STATEMENT in info.keys():
             article_copyright = bs_c.find("meta", {"name": "dc.copyright"})
             if article_copyright != None:
-                info[Row_Name.COPYRIGHT_STATEMENT]= article_copyright["content"]
+                info[Row_Name.COPYRIGHT_STATEMENT] = article_copyright["content"]
 
             article_copyright = bs_c.find("meta", {"name": "dc.Rights"})
             if article_copyright != None:
-                info[Row_Name.COPYRIGHT_STATEMENT]= article_copyright["content"]
+                info[Row_Name.COPYRIGHT_STATEMENT] = article_copyright["content"]
 
-        #解析作者及机构
+        # 解析作者及机构
         if not Row_Name.AUTHOR_NAME in info.keys():
-            author=None
-            aff=None
+            author = None
+            aff = None
             try:
-                author,aff=self.get_author_and_aff_from_head(bs_c)
+                author, aff = self.get_author_and_aff_from_head(bs_c)
             except:
                 pass
 
-            if author!=None:
-                info[Row_Name.AUTHOR_NAME]=author
-            if aff!=None:
-                info[Row_Name.AFFILIATION]=aff
+            if author != None:
+                info[Row_Name.AUTHOR_NAME] = author
+            if aff != None:
+                info[Row_Name.AFFILIATION] = aff
 
         # 解析pdf_url
         if not Row_Name.FULLTEXT_URL in info.keys():
@@ -306,30 +323,26 @@ class common_article:
         info[Row_Name.ABS_URL] = data.url
         info[Row_Name.PAGEURL] = data.url
 
+        return info
 
-        try:
-            info=self.second(info,data.text,soup=bs_c)
-        except:
-            logger.error("second方法执行出错！", exc_info=True)
+    def split_items(self,info):
 
-
-
-
-        #计算总页码
-        if Row_Name.START_PAGE in info and Row_Name.END_PAGE in  info:
-            info[Row_Name.PAGE_TOTAL]=self.get_page_total(info[Row_Name.START_PAGE],info[Row_Name.END_PAGE])
+        # 计算总页码
+        if Row_Name.START_PAGE in info and Row_Name.END_PAGE in info:
+            info[Row_Name.PAGE_TOTAL] = self.get_page_total(info[Row_Name.START_PAGE], info[Row_Name.END_PAGE])
         # elif not Row_Name.START_PAGE in info and  not Row_Name.END_PAGE in  info:
         #     pass
         # else:
         #     info[Row_Name.PAGE_TOTAL]=1
 
-        #拆分copyright
-        if Row_Name.COPYRIGHT_STATEMENT in info :
-            year,header_string=self.clean_copyright(info[Row_Name.COPYRIGHT_STATEMENT])
-            info[Row_Name.COPYRIGHT_YEAR]=year
-            info[Row_Name.COPYRIGHT_HOLDER]=header_string
+        # 拆分copyright
+        if Row_Name.COPYRIGHT_STATEMENT in info:
+            year, header_string = self.clean_copyright(info[Row_Name.COPYRIGHT_STATEMENT])
+            info[Row_Name.COPYRIGHT_YEAR] = year
+            info[Row_Name.COPYRIGHT_HOLDER] = header_string
 
         return info
+
 
     def first(self,temp_data):
         '''

@@ -87,7 +87,7 @@ class article(common_article):
 
 
 if __name__ == '__main__':
-    url = "http://blogs.shu.edu/ghg/2015/10/"
+    url = "http://bmathaa.org/vol_4_issue_3.html"
     data = requests.get(url)
     soup=BeautifulSoup(data.text,"html.parser")
     # print(soup)
