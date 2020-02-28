@@ -429,8 +429,8 @@ if __name__ == '__main__':
 
     job=jobs()
     # job.test_website("MaryAnn","https://home.liebertpub.com/publications/by-type/journals-open-access/892/")
-    job.run_single_website("single")
-    # job.test_single()
+    # job.run_single_website("single")
+    job.test_single()
 
     # run_article_error_test(r"C:\execl\20191015\article.txt","https://www.fasebj.org/doi/10.1096/fj.14-254037")
 

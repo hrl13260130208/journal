@@ -201,7 +201,7 @@ class common_article:
 
             data = requests.get(info[Row_Name.TEMP_AURL],headers=header,verify=False)
             bs_c = BeautifulSoup(data.text, "html.parser")
-            info=self.head_parser(info,bs_c)
+            info=self.head_parser(info,bs_c,data)
             try:
                 info=self.second(info,data.text,soup=bs_c)
             except:
@@ -216,7 +216,7 @@ class common_article:
 
         return self.split_items(info)
 
-    def head_parser(self,info,bs_c):
+    def head_parser(self,info,bs_c,data):
 
         # 解析article_type
         if not Row_Name.ARTICLE_TYPE in info.keys():
@@ -704,6 +704,23 @@ class common_article:
                 return text[:-(index-1)]
         else:
             return self.find_last(text, index + 1)
+
+    def find_first(self, text, index=0):
+        '''
+        检查第一位是否是字母
+        :param text:
+        :param index:
+        :return: 非字母与字母
+        '''
+
+        # print(text,index)
+        if text[index].isalpha():
+            if index==0:
+                return None,text
+            else:
+                return text[:index],text[index:]
+        else:
+            return self.find_first(text, index + 1)
 
     def get_sup(self,text, key_set, num):
         '''
