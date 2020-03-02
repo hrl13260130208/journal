@@ -40,6 +40,248 @@ class journals(common_journals):
                 info[Row_Name.STRING_COVER_DATE]=i[1]
                 info[Row_Name.TEMP_URL]=a["href"]
                 infos.append(info)
+
+        info = dict(journal_common_info)
+        info[Row_Name.VOLUME] = "12"
+        info[Row_Name.YEAR] = "2015"
+        info[Row_Name.ISSUE] ="5"
+        info[Row_Name.STRING_COVER_DATE] = "October 2015"
+        info[Row_Name.TEMP_URL] = "https://www.clinicalneuropsychiatry.org/clinical-neuropsychiatry-volume-12-issue-5-october-2015/"
+        infos.append(info)
+
+        info = dict(journal_common_info)
+        info[Row_Name.VOLUME] = "12"
+        info[Row_Name.YEAR] = "2015"
+        info[Row_Name.ISSUE] ="4"
+        info[Row_Name.STRING_COVER_DATE] = "August 2015"
+        info[Row_Name.TEMP_URL] = "https://www.clinicalneuropsychiatry.org/clinical-neuropsychiatry-volume-12-issue-4-august-2015/"
+        infos.append(info)
+
+        info = dict(journal_common_info)
+        info[Row_Name.VOLUME] = "12"
+        info[Row_Name.YEAR] = "2015"
+        info[Row_Name.ISSUE] ="3"
+        info[Row_Name.STRING_COVER_DATE] = "June 2015"
+        info[Row_Name.TEMP_URL] = "https://www.clinicalneuropsychiatry.org/clinical-neuropsychiatry-volume-12-issue-3-june-2015/"
+        infos.append(info)
+
+        info = dict(journal_common_info)
+        info[Row_Name.VOLUME] = "12"
+        info[Row_Name.YEAR] = "2015"
+        info[Row_Name.ISSUE] ="1/2"
+        info[Row_Name.STRING_COVER_DATE] = "February/April 2015"
+        info[Row_Name.TEMP_URL] = "https://www.clinicalneuropsychiatry.org/clinical-neuropsychiatry-volume-12-issue-1-2-february-april-2015/"
+        infos.append(info)
+
+        info = dict(journal_common_info)
+        info[Row_Name.VOLUME] = "11"
+        info[Row_Name.YEAR] = "2014"
+        info[Row_Name.ISSUE] ="6"
+        info[Row_Name.STRING_COVER_DATE] = "December 2014"
+        info[Row_Name.TEMP_URL] = "https://www.clinicalneuropsychiatry.org/clinical-neuropsychiatry-volume-11-issue-6-december-2014/"
+        infos.append(info)
+
+        info = dict(journal_common_info)
+        info[Row_Name.VOLUME] = "11"
+        info[Row_Name.YEAR] = "2014"
+        info[Row_Name.ISSUE] ="3/4/5"
+        info[Row_Name.STRING_COVER_DATE] = "June/August/October 2014"
+        info[Row_Name.TEMP_URL] = "https://www.clinicalneuropsychiatry.org/clinical-neuropsychiatry-volume-11-issue-3-4-5-june-august-october-2014/"
+        infos.append(info)
+
+        info = dict(journal_common_info)
+        info[Row_Name.VOLUME] = "11"
+        info[Row_Name.YEAR] = "2014"
+        info[Row_Name.ISSUE] ="2"
+        info[Row_Name.STRING_COVER_DATE] = "April 2014"
+        info[Row_Name.TEMP_URL] = "https://www.clinicalneuropsychiatry.org/clinical-neuropsychiatry-volume-11-issue-2-april-2014/"
+        infos.append(info)
+
+        info = dict(journal_common_info)
+        info[Row_Name.VOLUME] = "11"
+        info[Row_Name.YEAR] = "2014"
+        info[Row_Name.ISSUE] ="1"
+        info[Row_Name.STRING_COVER_DATE] = "February 2014"
+        info[Row_Name.TEMP_URL] = "https://www.clinicalneuropsychiatry.org/clinical-neuropsychiatry-volume-11-issue-1-february-2014/"
+        infos.append(info)
+
+        info = dict(journal_common_info)
+        info[Row_Name.VOLUME] = "10"
+        info[Row_Name.YEAR] = "2013"
+        info[Row_Name.ISSUE] ="6"
+        info[Row_Name.STRING_COVER_DATE] = "December 2013"
+        info[Row_Name.TEMP_URL] = "https://www.clinicalneuropsychiatry.org/clinical-neuropsychiatry-volume-10-issue-6-december-2013/"
+        infos.append(info)
+
+        info = dict(journal_common_info)
+        info[Row_Name.VOLUME] = "10"
+        info[Row_Name.YEAR] = "2013"
+        info[Row_Name.ISSUE] ="5"
+        info[Row_Name.STRING_COVER_DATE] = "October 2013"
+        info[Row_Name.TEMP_URL] = "https://www.clinicalneuropsychiatry.org/clinical-neuropsychiatry-volume-10-issue-5-october-2013/"
+        infos.append(info)
+
+        info = dict(journal_common_info)
+        info[Row_Name.VOLUME] = "10"
+        info[Row_Name.YEAR] = "2013"
+        info[Row_Name.ISSUE] ="3/4"
+        info[Row_Name.STRING_COVER_DATE] = "June/August 2013"
+        info[Row_Name.TEMP_URL] = "https://www.clinicalneuropsychiatry.org/clinical-neuropsychiatry-volume-10-issue-3-4-june-august-2013/"
+        infos.append(info)
+
+        info = dict(journal_common_info)
+        info[Row_Name.VOLUME] = "10"
+        info[Row_Name.YEAR] = "2013"
+        info[Row_Name.ISSUE] ="2"
+        info[Row_Name.STRING_COVER_DATE] = "April 2013"
+        info[Row_Name.TEMP_URL] = "https://www.clinicalneuropsychiatry.org/clinical-neuropsychiatry-volume-10-issue-2-april-2013/"
+        infos.append(info)
+
+        info = dict(journal_common_info)
+        info[Row_Name.VOLUME] = "10"
+        info[Row_Name.YEAR] = "2013"
+        info[Row_Name.ISSUE] ="1"
+        info[Row_Name.STRING_COVER_DATE] = "February 2013"
+        info[Row_Name.TEMP_URL] = "https://www.clinicalneuropsychiatry.org/clinical-neuropsychiatry-volume-10-issue-1-february-2013/"
+        infos.append(info)
+
+        info = dict(journal_common_info)
+        info[Row_Name.VOLUME] = "9"
+        info[Row_Name.YEAR] = "2012"
+        info[Row_Name.ISSUE] ="6"
+        info[Row_Name.STRING_COVER_DATE] = "December 2012"
+        info[Row_Name.TEMP_URL] = "https://www.clinicalneuropsychiatry.org/clinical-neuropsychiatry-volume-9-issue-6-december-2012/"
+        infos.append(info)
+
+        info = dict(journal_common_info)
+        info[Row_Name.VOLUME] = "9"
+        info[Row_Name.YEAR] = "2012"
+        info[Row_Name.ISSUE] ="5"
+        info[Row_Name.STRING_COVER_DATE] = "October 2012"
+        info[Row_Name.TEMP_URL] = "https://www.clinicalneuropsychiatry.org/clinical-neuropsychiatry-volume-9-issue-5-october-2012/"
+        infos.append(info)
+
+        info = dict(journal_common_info)
+        info[Row_Name.VOLUME] = "9"
+        info[Row_Name.YEAR] = "2012"
+        info[Row_Name.ISSUE] ="4"
+        info[Row_Name.STRING_COVER_DATE] = "August 2012"
+        info[Row_Name.TEMP_URL] = "https://www.clinicalneuropsychiatry.org/clinical-neuropsychiatry-volume-9-issue-4-august-2012/"
+        infos.append(info)
+
+        info = dict(journal_common_info)
+        info[Row_Name.VOLUME] = "9"
+        info[Row_Name.YEAR] = "2012"
+        info[Row_Name.ISSUE] ="3"
+        info[Row_Name.STRING_COVER_DATE] = "June 2012"
+        info[Row_Name.TEMP_URL] = "https://www.clinicalneuropsychiatry.org/clinical-neuropsychiatry-volume-9-issue-3-june-2012/"
+        infos.append(info)
+
+        info = dict(journal_common_info)
+        info[Row_Name.VOLUME] = "9"
+        info[Row_Name.YEAR] = "2012"
+        info[Row_Name.ISSUE] ="2"
+        info[Row_Name.STRING_COVER_DATE] = "April 2012"
+        info[Row_Name.TEMP_URL] = "https://www.clinicalneuropsychiatry.org/clinical-neuropsychiatry-volume-9-issue-2-april-2012/"
+        infos.append(info)
+
+        info = dict(journal_common_info)
+        info[Row_Name.VOLUME] = "9"
+        info[Row_Name.YEAR] = "2012"
+        info[Row_Name.ISSUE] ="1"
+        info[Row_Name.STRING_COVER_DATE] = "February 2012"
+        info[Row_Name.TEMP_URL] = "https://www.clinicalneuropsychiatry.org/clinical-neuropsychiatry-volume-9-issue-1-february-2012/"
+        infos.append(info)
+
+        info = dict(journal_common_info)
+        info[Row_Name.VOLUME] = "8"
+        info[Row_Name.YEAR] = "2011"
+        info[Row_Name.ISSUE] ="6"
+        info[Row_Name.STRING_COVER_DATE] = "December 2011"
+        info[Row_Name.TEMP_URL] = "https://www.clinicalneuropsychiatry.org/clinical-neuropsychiatry-volume-8-issue-6-december-2011/"
+        infos.append(info)
+
+        info = dict(journal_common_info)
+        info[Row_Name.VOLUME] = "8"
+        info[Row_Name.YEAR] = "2011"
+        info[Row_Name.ISSUE] ="5"
+        info[Row_Name.STRING_COVER_DATE] = "October 2011"
+        info[Row_Name.TEMP_URL] = "https://www.clinicalneuropsychiatry.org/clinical-neuropsychiatry-volume-8-issue-5-october-2011/"
+        infos.append(info)
+
+        info = dict(journal_common_info)
+        info[Row_Name.VOLUME] = "8"
+        info[Row_Name.YEAR] = "2011"
+        info[Row_Name.ISSUE] ="4"
+        info[Row_Name.STRING_COVER_DATE] = "August 2011"
+        info[Row_Name.TEMP_URL] = "https://www.clinicalneuropsychiatry.org/clinical-neuropsychiatry-volume-8-issue-4-august-2011/"
+        infos.append(info)
+
+        info = dict(journal_common_info)
+        info[Row_Name.VOLUME] = "8"
+        info[Row_Name.YEAR] = "2011"
+        info[Row_Name.ISSUE] ="3"
+        info[Row_Name.STRING_COVER_DATE] = "June 2011"
+        info[Row_Name.TEMP_URL] = "https://www.clinicalneuropsychiatry.org/clinical-neuropsychiatry-volume-8-issue-3-june-2011/"
+        infos.append(info)
+
+        info = dict(journal_common_info)
+        info[Row_Name.VOLUME] = "8"
+        info[Row_Name.YEAR] = "2011"
+        info[Row_Name.ISSUE] ="2"
+        info[Row_Name.STRING_COVER_DATE] = "April 2011"
+        info[Row_Name.TEMP_URL] = "https://www.clinicalneuropsychiatry.org/clinical-neuropsychiatry-volume-8-issue-2-april-2011/"
+        infos.append(info)
+
+        info = dict(journal_common_info)
+        info[Row_Name.VOLUME] = "8"
+        info[Row_Name.YEAR] = "2011"
+        info[Row_Name.ISSUE] ="1"
+        info[Row_Name.STRING_COVER_DATE] = "February 2011"
+        info[Row_Name.TEMP_URL] = "https://www.clinicalneuropsychiatry.org/clinical-neuropsychiatry-volume-8-issue-1-february-2011/"
+        infos.append(info)
+
+        info = dict(journal_common_info)
+        info[Row_Name.VOLUME] = "7"
+        info[Row_Name.YEAR] = "2010"
+        info[Row_Name.ISSUE] ="6"
+        info[Row_Name.STRING_COVER_DATE] = "December 2010"
+        info[Row_Name.TEMP_URL] = "https://www.clinicalneuropsychiatry.org/clinical-neuropsychiatry-volume-7-issue-6-december-2010/"
+        infos.append(info)
+
+        info = dict(journal_common_info)
+        info[Row_Name.VOLUME] = "7"
+        info[Row_Name.YEAR] = "2010"
+        info[Row_Name.ISSUE] ="4/5"
+        info[Row_Name.STRING_COVER_DATE] = "August/October 2010"
+        info[Row_Name.TEMP_URL] = "https://www.clinicalneuropsychiatry.org/clinical-neuropsychiatry-volume-7-issue-4-5-august-october-2010/"
+        infos.append(info)
+
+        info = dict(journal_common_info)
+        info[Row_Name.VOLUME] = "7"
+        info[Row_Name.YEAR] = "2010"
+        info[Row_Name.ISSUE] ="3"
+        info[Row_Name.STRING_COVER_DATE] = "June 2010"
+        info[Row_Name.TEMP_URL] = "https://www.clinicalneuropsychiatry.org/clinical-neuropsychiatry-volume-7-issue-3-june-2010/"
+        infos.append(info)
+
+        info = dict(journal_common_info)
+        info[Row_Name.VOLUME] = "7"
+        info[Row_Name.YEAR] = "2010"
+        info[Row_Name.ISSUE] ="2"
+        info[Row_Name.STRING_COVER_DATE] = "April 2010"
+        info[Row_Name.TEMP_URL] = "https://www.clinicalneuropsychiatry.org/clinical-neuropsychiatry-volume-7-issue-2-april-2010/"
+        infos.append(info)
+
+        info = dict(journal_common_info)
+        info[Row_Name.VOLUME] = "7"
+        info[Row_Name.YEAR] = "2010"
+        info[Row_Name.ISSUE] ="1"
+        info[Row_Name.STRING_COVER_DATE] = "February 2010"
+        info[Row_Name.TEMP_URL] = "https://www.clinicalneuropsychiatry.org/clinical-neuropsychiatry-volume-7-issue-1-february-2010/"
+        infos.append(info)
+
+
         return infos
 
 
