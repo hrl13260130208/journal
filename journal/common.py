@@ -134,7 +134,7 @@ class common_journals:
 
 
 class common_article:
-    DOWNLOAD_DIR = "C:/pdfs/"
+    DOWNLOAD_DIR = "D:/pdfs/"
 
     def __init__(self,website):
         self.nm = name_manager()
